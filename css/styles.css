@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #8b4dc2,
+    #6f3aa8
+    );
+}
