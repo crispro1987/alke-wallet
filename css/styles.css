@@ -11,3 +11,21 @@ body {
     #6f3aa8
     );
 }
+
+.btn-pr{
+  display: inline-block;
+  background-color: #582e85;
+  border-radius: 1em;
+  border:none;
+  color: white;
+  padding: 1em 2em;
+  min-width: 200px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease-in .3s;
+}
+
+.btn-pr:hover{
+  background-color: #321a4c;
+}
