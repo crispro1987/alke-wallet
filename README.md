@@ -2,6 +2,10 @@
 
 Proyecto frontend desarrollado con **HTML, CSS, Bootstrap, JavaScript y jQuery** como parte del desafío **Alke Wallet**.
 
+## Usuario para pruebas
+user: usuario@alke.com
+pass: 1234
+
 ## Descripción
 
 Alke Wallet es una aplicación web que simula una billetera digital.  
