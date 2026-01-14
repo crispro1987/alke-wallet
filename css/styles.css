@@ -21,6 +21,14 @@ body {
     background-attachment: fixed;
 }
 
+.redC{
+  color:red;
+}
+
+.greenC{
+  color: green;
+}
+
 .btn-pr,
 .btn-pr2{
   display: inline-block;
