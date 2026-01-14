@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alke - Wallet | Menu</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/32e9f28142.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-6">
+            <div class="head-carding">
+              <span
+                ><img
+                  src="assets/img/alkewallet-logo.png"
+                  alt="Logo AlkeWallet"
+                />
+                alke wallet</span
+              >
+
+              <span
+                ><i class="fa-solid fa-gear me-2 me-md-3"></i>
+                <i class="fa-solid fa-bell me-2 me-md-3"></i>
+                <i class="fa-solid fa-user"></i
+              ></span>
+            </div>
+            <div class="carding text-center">
+              <h2 id="user-current"></h2>
+              <p class="title-saldo">SALDO DISPONIBLE</p>
+              <p class="current-saldo m-0">$ <span id="saldo"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row justify-content-center mt-2">
+          <div class="col-11 col-md-2">
+            <a href="deposit.html" class="btn-home mt-2 mt-md-0" id="deposit">
+              <i class="fa-solid fa-money-bill-wave me-2 me-md-0"></i>
+              <p>Depositar</p>
+            </a>
+          </div>
+          <div class="col-11 col-md-2">
+            <a
+              href="sendmoney.html"
+              class="btn-home mt-2 mt-md-0"
+              id="sendMoney"
+            >
+              <i class="fa-solid fa-money-bill-trend-up me-2 me-md-0"></i>
+              <p>Transferir</p>
+            </a>
+          </div>
+          <div class="col-11 col-md-2">
+            <a
+              href="transactions.html"
+              class="btn-home mt-2 mt-md-0"
+              id="lastMov"
+            >
+              <i class="fa-solid fa-money-bill-transfer me-2 me-md-0"></i>
+              <p>Movimientos</p>
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-6 mt-4" id="resultsMenu"></div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-10 col-md-6 last">
+            <h4>
+              <i class="fa-solid fa-credit-card me-2"></i>Últimos movimientos
+            </h4>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-6 text-center">
+            <img src="assets/img/alkewallet-logo.png" alt="logo alke wallet" />
+          </div>
+          <div class="col-11 col-md-7 text-center">
+            <h4>alke wallet | <small>BILLETERA DIGITAL</small></h4>
+            <span>Proyecto Módulo II</span>
+            <br />
+            <span>Diseñado por Cristian Vargas</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

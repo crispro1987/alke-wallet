@@ -1,3 +1,9 @@
+:root {
+  --all: #8b4dc2;
+  --primary: #582e85;
+  --secondary: #321a4c;
+  --complement: #FFD700;
+}
 
 html, body { height: 100%; }
 body {
