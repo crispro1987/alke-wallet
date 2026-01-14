@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alke - Wallet | Transferir</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/32e9f28142.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-6">
+            <div class="head-carding">
+              <span
+                ><img
+                  src="assets/img/alkewallet-logo.png"
+                  alt="Logo AlkeWallet"
+                />
+                alke wallet</span
+              >
+
+              <span
+                ><i class="fa-solid fa-gear me-2 me-md-3"></i>
+                <i class="fa-solid fa-bell me-2 me-md-3"></i>
+                <i class="fa-solid fa-user"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container mb-5">
+        <div class="row justify-content-center mt-2">
+          <div class="col-11 col-md-6 carding text-center">
+            <h2>Transferencia de fondos</h2>
+            <form id="sendMoney">
+              <button
+                type="button"
+                class="btn-pr2 mb-3"
+                data-bs-toggle="modal"
+                data-bs-target="#addContact"
+              >
+                Agregar nuevo contacto
+              </button>
+
+              <h3>Contactos</h3>
+              <div class="form-group mb-3 mt-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="filter"
+                  list="contacts-list"
+                  placeholder="Filtrar contactos"
+                />
+                <datalist id="contacts-list"> </datalist>
+              </div>
+
+              <ul class="list-group mb-3" id="clientsList"></ul>
+
+              <hr />
+
+              <div class="form-group mb-3">
+                <label for="amount">Monto a enviar</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="amount"
+                  min="0"
+                  placeholder="$"
+                />
+              </div>
+
+              <button
+                type="button"
+                id="sendMoneyBtn"
+                class="btn-pr2 w-100 mb-3"
+              >
+                Enviar dinero
+              </button>
+              <div id="resultsSend"></div>
+            </form>
+            <div class="mt-3">
+              <a href="menu.html" class="btn-pr3 w-100">
+                <i class="fa-solid fa-arrow-left me-2"></i> Volver al Menú
+                Principal
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL -->
+
+        <div
+          class="modal fade"
+          id="addContact"
+          tabindex="-1"
+          aria-labelledby="addContactLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addContactLabel">
+                  Agregar Contacto
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="formDialog">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-6 form-group mb-3">
+                        <label for="name">Nombre</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Juan"
+                          required=""
+                        />
+                      </div>
+                      <div class="col-6 form-group mb-3">
+                        <label for="lastname">Apellido</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="lastname"
+                          placeholder="Pérez"
+                          required=""
+                        />
+                      </div>
+                      <div class="col-6 form-group mb-3">
+                        <label for="cbu">RUT</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="cbu"
+                          placeholder="123456789"
+                        />
+                      </div>
+                      <div class="col-6 form-group mb-3">
+                        <label for="alias">Alias</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="alias"
+                          placeholder="JP"
+                        />
+                      </div>
+                      <div class="col-12 form-group mb-3">
+                        <label for="bank">Banco</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="bank"
+                          placeholder="BCI"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div id="resultModal"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button type="button" class="btn btn-primary" id="saveClient">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-6 text-center">
+            <img src="assets/img/alkewallet-logo.png" alt="logo alke wallet" />
+          </div>
+          <div class="col-11 col-md-7 text-center">
+            <h4>alke wallet | <small>BILLETERA DIGITAL</small></h4>
+            <span>Proyecto Módulo II</span>
+            <br />
+            <span>Diseñado por Cristian Vargas</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/send.js"></script>
+  </body>
+</html>

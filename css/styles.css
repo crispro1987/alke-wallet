@@ -140,6 +140,12 @@ label{
   font-weight: 800;
 }
 
+/** SENDMONEY */
+
+#sendMoney h3{
+  color:var(--all)
+}
+
 /* FOOTER */
 footer{
   padding: 2em;

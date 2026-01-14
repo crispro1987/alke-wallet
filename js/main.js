@@ -65,7 +65,7 @@ $(document).ready(function(){
 
     $('#sendMoney').click(function(e){
         e.preventDefault();
-        showLegends('enviar dinero','sendmoney');
+        showLegends('transferencia de fondos','sendmoney');
     });
 
     $('#lastMov').click(function(e){
@@ -148,5 +148,7 @@ $(document).ready(function(){
         }, 2000);
 
     })
+
+    
 
 });
