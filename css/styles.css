@@ -19,16 +19,11 @@ body {
     );
     background-repeat: no-repeat;
     background-attachment: fixed;
-  
 }
 
-main{
-  min-height: 43dvh;
-}
-
-.btn-pr{
+.btn-pr,
+.btn-pr2{
   display: inline-block;
-  background-color: var(--primary);
   border-radius: 1em;
   border:none;
   color: white;
@@ -40,7 +35,15 @@ main{
   transition: all ease-in .3s;
 }
 
-.btn-pr:hover{
+.btn-pr{
+  background-color: var(--primary);
+}
+
+.btn-pr2:hover{
+  background-color: var(--all);
+}
+
+.btn-pr:hover, .btn-pr2{
   background-color: var(--secondary);
 }
 
@@ -115,6 +118,26 @@ main{
 .last h4{
   font-size: 1.2rem;
   color:var(--secondary);
+}
+
+/** DEPOSIT **/
+
+label{
+  color:var(--all);
+  font-weight: 600;
+}
+
+.btn-pr3{
+  font-size: 1.2rem;
+  color:var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all ease .3s;
+}
+
+.btn-pr3:hover{
+  color:var(--all);
+  font-weight: 800;
 }
 
 /* FOOTER */

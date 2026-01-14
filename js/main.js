@@ -89,4 +89,64 @@ $(document).ready(function(){
       }, 1500);
     }
 
+
+    // DEPOSIT
+
+    $('#resultsDeposit').hide();
+
+    const form = document.getElementById('formDeposit');
+    const amount = document.getElementById('amount');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        $('#resultsDeposit').html('');
+
+        const amountN = Number(amount.value);
+    
+        if (!amountN || amountN <= 0) {
+            $('#resultsDeposit').append(`
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <p>Ingresa un monto válido</p>
+                </div>
+            `)
+            .slideDown();
+            
+            setTimeout(function () {
+                $('#resultsDeposit').slideUp()
+            }, 3000);
+            return;
+        }
+
+        let saldoCurrent = Number(localStorage.getItem("saldo")) || 0;
+
+        const newSaldo = saldoCurrent + amountN;
+
+        localStorage.setItem("saldo", String(newSaldo));
+
+        const trans = { type: 'Deposito', value: amountN };
+
+        if(localStorage.getItem('transactions')){
+            const localS = JSON.parse(localStorage.getItem('transactions'));
+            localS.push(trans);
+            localStorage.setItem('transactions', JSON.stringify(localS));
+        }else{
+            const currentTrans = [];
+            currentTrans.push(trans);
+            localStorage.setItem('transactions', JSON.stringify(currentTrans));
+        }
+
+        $('#resultsDeposit').append(`
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <p>Su deposito ha sido de $${amountN}</p>
+            </div>
+        `)
+        .slideDown();
+
+        setTimeout(() => {  
+            window.location.href = 'menu.html';
+        }, 2000);
+
+    })
+
 });
