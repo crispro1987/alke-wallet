@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     $('#result').hide();
 
-    const user = 'cristian@dosiscl.com';
+    const user = 'usuario@alke.com';
     const pass = '1234';
     
     $('#loginForm').submit(function(e){
